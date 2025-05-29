@@ -42,6 +42,11 @@ app.use("/api/v1/skill", skillRouter);
 app.use("/api/v1/project", projectRouter);
 
 
+app.get("/ping", (req, res) => {
+res.status(200).send("OK");
+});
+
+
 dbConnection();
 app.use(errorMiddleware);
 
